@@ -20,9 +20,6 @@ import StringUtils exposing ((+-+), (+++))
 import DebugF exposing (..)
 
 
--- import Slate.Entity.Helper as Helper exposing (..)
-
-
 port exitApp : Float -> Cmd msg
 
 
@@ -31,12 +28,12 @@ port externalStop : (() -> msg) -> Sub msg
 
 dbConnectionInfo : DbConnectionInfo
 dbConnectionInfo =
-    { host = "postgresDBServer"
+    { host = "testEntitiesServer"
     , port_ = 5432
     , database = "test_entities"
-    , user = "charles"
-    , password = "testpassword"
-    , timeout = 5000
+    , user = "postgres"
+    , password = "password"
+    , timeout = 15000
     }
 
 
