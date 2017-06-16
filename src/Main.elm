@@ -136,7 +136,7 @@ update msg model =
                                 Mutating mutatingEvent (Metadata "999888777" "asMultCmds")
 
                             commands =
-                                List.map (\( mutatingEvent, maybeVaidation ) -> ( LockAndValidate << ValidateForMutation <| toEvent mutatingEvent, encodeMutatingEvent <| toEvent mutatingEvent, maybeVaidation ))
+                                List.map (\( mutatingEvent, maybeVaidation ) -> ( LockAndValidate << ValidateForMutation <| toEvent mutatingEvent, encodeEvent <| toEvent mutatingEvent, maybeVaidation ))
                                     [ ( CreateEntity "Person" "123", Nothing )
                                     , ( CreateEntity "Person" "456", Nothing )
                                     , ( CreateEntity "Address" "789", Nothing )
@@ -188,7 +188,7 @@ update msg model =
 
                             ( entityValidations, encodedEvents ) =
                                 ( mutatingEvents |> List.map (\mutatingEvent -> (LockAndValidate << ValidateForMutation <| toEvent mutatingEvent))
-                                , mutatingEvents |> List.map (encodeMutatingEvent << toEvent)
+                                , mutatingEvents |> List.map (encodeEvent << toEvent)
                                 )
 
                             ( commandProcessorModel, cmd, commandId ) =
