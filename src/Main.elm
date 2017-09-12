@@ -39,11 +39,15 @@ dbConnectionInfo =
 
 commandProcessorConfig : CommandProcessor.Config String Msg
 commandProcessorConfig =
-    { routeToMeTagger = CommandProcessorModule
+    { connectionRetryMax = 3
+    , routeToMeTagger = CommandProcessorModule
     , errorTagger = CommandProcessorError
     , logTagger = CommandProcessorLog
     , commandErrorTagger = CommandError
     , commandSuccessTagger = CommandSuccess
+    , schemaDict = Dict.empty
+    , queryBatchSize = Nothing
+    , debug = True
     }
 
 
