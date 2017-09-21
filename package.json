@@ -1,5 +1,5 @@
 {
-  "name": "@panosoft/test-command",
+  "name": "@elm-slate/test-command",
   "version": "1.0.3",
   "scripts": {
     "start": "elm make src/Main.elm --output elm.js && node main",
@@ -7,7 +7,6 @@
   },
   "license": "Unlicense",
 "dependencies": {
-    "@elm-slate/command": "/Users/charles/Documents/workspace/elm/elm-slate/test-command/elm-stuff/packages/elm-slate/command/2.0.2",
-    "@panosoft/elm-postgres": "/Users/charles/Documents/workspace/elm/elm-slate/test-command/elm-stuff/packages/panosoft/elm-postgres/4.2.0"
+    "@elm-slate/command": "elm-stuff/grove/packages/elm-slate/command/installed"
   }
 }
