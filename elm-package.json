@@ -1,5 +1,5 @@
 {
-    "version": "1.0.3",
+    "version": "1.0.4",
     "summary": "App for testing Slate command",
     "repository": "https://github.com/elm-slate/test-command.git",
     "license": "Unlicense",
